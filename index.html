@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilel BEN SAID — Ingénieur Embarqué</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts : Space Mono (monospace tech) + Syne (display) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ============================================================
+       CURSEUR PERSONNALISÉ (optionnel — supprimable)
+  ============================================================ -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- ============================================================
+       BARRE DE NAVIGATION
+  ============================================================ -->
+    <nav id="navbar">
+      <div class="nav-logo">
+        <!-- 🔧 PERSONNALISER : tes initiales ou ton nom court -->
+        <span class="nav-logo-text">B<span class="accent">.</span>BS</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#competences">Skills</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#formation">Formation</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <!-- Bouton hamburger pour mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- ============================================================
+       SECTION HERO
+  ============================================================ -->
+    <section id="hero">
+      <!-- Grille de fond décorative -->
+      <div class="hero-grid"></div>
+      <!-- Lignes de scan animées -->
+      <div class="scanlines"></div>
+
+      <div class="hero-content">
+        <!-- Badge statut -->
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <!-- 🔧 PERSONNALISER : ton statut actuel -->
+          <span>Disponible pour alternance — Sept. 2026</span>
+        </div>
+
+        <h1 class="hero-title">
+          <!-- 🔧 PERSONNALISER : ton prénom et nom -->
+          <span class="line-reveal">Bilel</span>
+          <span class="line-reveal delay-1"
+            >BEN SAID<span class="accent">.</span></span
+          >
+        </h1>
+
+        <p class="hero-subtitle line-reveal delay-2">
+          <!-- 🔧 PERSONNALISER : ta spécialité -->
+          Élève-ingénieur · Électronique &amp; Systèmes Embarqués
+        </p>
+
+        <p class="hero-desc line-reveal delay-3">
+          <!-- 🔧 PERSONNALISER : description courte -->
+          Polytech Nice Sophia · Firmware · Software embarqué<br />
+          Automobile · Aéronautique · IoT · Spatial
+        </p>
+
+        <div class="hero-cta line-reveal delay-4">
+          <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+          <a href="#contact" class="btn btn-ghost">Me contacter</a>
+        </div>
+
+        <!-- Compteur / stats rapides -->
+        <div class="hero-stats line-reveal delay-5">
+          <div class="stat">
+            <span class="stat-num" data-target="3">0</span>
+            <span class="stat-label">Projets</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="795">0</span>
+            <span class="stat-label">TOEIC</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="3">0</span>
+            <span class="stat-label">Langages</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terminal décoratif -->
+      <div class="hero-terminal line-reveal delay-3">
+        <div class="terminal-header">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">bilel@polytech:~$</span>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+          <!-- Rempli par JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION PROFIL
+  ============================================================ -->
+    <section id="profil" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">01</span>
+          <h2 class="section-title">Profil</h2>
+        </div>
+        <div class="profil-grid">
+          <div class="profil-text">
+            <!-- 🔧 PERSONNALISER : ton texte de présentation -->
+            <p>
+              Élève-ingénieur en 1ère année de cycle ingénieur en
+              <strong>Électronique et Systèmes Embarqués</strong> à Polytech
+              Nice Sophia, je recherche une
+              <strong>alternance de 24 mois</strong> à partir de septembre 2026
+              en développement firmware et software embarqué.
+            </p>
+            <p>
+              Passionné par les systèmes temps réel, la programmation bas niveau
+              et les environnements contraints, je m'intéresse particulièrement
+              aux secteurs de l'<strong>automobile</strong>, de
+              l'<strong>aéronautique</strong>, de l'<strong>IoT</strong> et du
+              <strong>spatial</strong>.
+            </p>
+          </div>
+          <div class="profil-info-grid">
+            <!-- 🔧 PERSONNALISER : tes infos de contact -->
+            <div class="info-card">
+              <span class="info-icon">📍</span>
+              <div>
+                <span class="info-label">Localisation</span>
+                <span class="info-value">Antibes, 06600</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">🎓</span>
+              <div>
+                <span class="info-label">École</span>
+                <span class="info-value">Polytech Nice Sophia</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">🌐</span>
+              <div>
+                <span class="info-label">Langues</span>
+                <span class="info-value">FR · EN (B2) · AR (bilingue)</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">🏀</span>
+              <div>
+                <span class="info-label">Loisir</span>
+                <span class="info-value">Basketball (niveau régional)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION COMPÉTENCES
+  ============================================================ -->
+    <section id="competences" class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">02</span>
+          <h2 class="section-title">Compétences</h2>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Catégorie 1 -->
+          <div class="skill-category">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-icon">&lt;/&gt;</span> Informatique
+            </h3>
+            <div class="skill-tags">
+              <!-- 🔧 PERSONNALISER : tes langages -->
+              <span class="tag tag-primary">C</span>
+              <span class="tag">Python</span>
+              <span class="tag">Matlab</span>
+              <span class="tag">Java</span>
+            </div>
+            <!-- Barres de progression -->
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <span>C</span>
+                <div class="bar">
+                  <div class="bar-fill" data-width="85"></div>
+                </div>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar-item">
+                <span>Python</span>
+                <div class="bar">
+                  <div class="bar-fill" data-width="70"></div>
+                </div>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar-item">
+                <span>Matlab</span>
+                <div class="bar">
+                  <div class="bar-fill" data-width="60"></div>
+                </div>
+                <span>60%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Catégorie 2 -->
+          <div class="skill-category">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-icon">⚡</span> Électronique
+            </h3>
+            <div class="skill-tags">
+              <!-- 🔧 PERSONNALISER : tes outils électronique -->
+              <span class="tag tag-primary">LTspice</span>
+              <span class="tag">Oscilloscope</span>
+              <span class="tag">Schéma</span>
+              <span class="tag">Bancs de tests</span>
+              <span class="tag">R2R ADC</span>
+            </div>
+          </div>
+
+          <!-- Catégorie 3 -->
+          <div class="skill-category">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-icon">🛠</span> Outils &amp; OS
+            </h3>
+            <div class="skill-tags">
+              <!-- 🔧 PERSONNALISER : tes outils -->
+              <span class="tag tag-primary">Linux</span>
+              <span class="tag">Git</span>
+              <span class="tag">CMake</span>
+              <span class="tag">VS Code</span>
+              <span class="tag">CLion</span>
+              <span class="tag">Emacs</span>
+              <span class="tag">Google Colab</span>
+              <span class="tag">API POSIX</span>
+            </div>
+          </div>
+
+          <!-- Catégorie 4 : Certifications -->
+          <div class="skill-category skill-category-wide">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-icon">🏅</span> Certifications
+            </h3>
+            <div class="cert-list">
+              <!-- 🔧 PERSONNALISER : tes certifications -->
+              <div class="cert-item">
+                <div class="cert-badge">ML</div>
+                <div>
+                  <span class="cert-name">Supervised Machine Learning</span>
+                  <span class="cert-org"
+                    >Coursera · Regression &amp; Classification</span
+                  >
+                </div>
+              </div>
+              <div class="cert-item">
+                <div class="cert-badge">✈</div>
+                <div>
+                  <span class="cert-name">BIA</span>
+                  <span class="cert-org"
+                    >Brevet d'initiation à l'aéronautique</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION PROJETS
+  ============================================================ -->
+    <section id="projets" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">03</span>
+          <h2 class="section-title">Projets</h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Projet 1 -->
+          <article class="project-card" data-status="En cours">
+            <div class="project-header">
+              <span class="project-status status-active">● En cours</span>
+              <span class="project-date">Mars 2026 →</span>
+            </div>
+            <!-- 🔧 PERSONNALISER : nom du projet -->
+            <h3 class="project-title">Interpréteur de Commandes</h3>
+            <p class="project-desc">
+              <!-- 🔧 PERSONNALISER : description du projet -->
+              Shell interactif avec routage modulaire via pointeurs de
+              fonctions. Gestion des processus (fork, execvp, waitpid) et
+              fichiers via l'API POSIX. Parseur d'arguments et gestion stricte
+              des allocations mémoire.
+            </p>
+            <div class="project-tech">
+              <!-- 🔧 PERSONNALISER : technologies utilisées -->
+              <span class="tag">C</span>
+              <span class="tag">API Linux</span>
+              <span class="tag">Readline</span>
+              <span class="tag">Git</span>
+              <span class="tag">CMake</span>
+            </div>
+            <div class="project-features">
+              <div class="feature">
+                <span class="feature-dot"></span>Architecture modulaire
+              </div>
+              <div class="feature">
+                <span class="feature-dot"></span>Gestion processus POSIX
+              </div>
+              <div class="feature">
+                <span class="feature-dot"></span>Gestion mémoire malloc/free
+              </div>
+            </div>
+            <!-- 🔧 PERSONNALISER : lien GitHub ou projet -->
+            <a
+              href="https://github.com/bilelbensaid/BillyShell"
+              class="project-link"
+              >Voir sur GitHub →</a
+            >
+          </article>
+
+          <!-- Projet 2 -->
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-status status-done">✓ Terminé</span>
+              <span class="project-date">Sep 2025 – Jan 2026</span>
+            </div>
+            <!-- 🔧 PERSONNALISER : nom du projet -->
+            <h3 class="project-title">Convertisseur ADC 8 bits</h3>
+            <p class="project-desc">
+              <!-- 🔧 PERSONNALISER : description -->
+              Conception d'un ADC 8 bits avec réseau R2R. Sélection statistique
+              des résistances (tolérance 0.21%), détection de court-circuit,
+              réparation de pistes et validation sur banc de test avec
+              oscilloscope.
+            </p>
+            <div class="project-tech">
+              <span class="tag">Électronique</span>
+              <span class="tag">R2R</span>
+              <span class="tag">LTspice</span>
+              <span class="tag">Oscilloscope</span>
+            </div>
+            <div class="project-features">
+              <div class="feature">
+                <span class="feature-dot"></span>Tolérance résistances 0.21%
+              </div>
+              <div class="feature">
+                <span class="feature-dot"></span>Tests fonctionnels I/O
+              </div>
+              <div class="feature">
+                <span class="feature-dot"></span>Diagnostic &amp; réparation
+              </div>
+            </div>
+            <a href="#" class="project-link">En savoir plus →</a>
+          </article>
+
+          <!-- Projet 3 -->
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-status status-done">✓ Terminé</span>
+              <span class="project-date">Mar – Avr 2025</span>
+            </div>
+            <!-- 🔧 PERSONNALISER : nom du projet -->
+            <h3 class="project-title">Fréquencemètre Analogique</h3>
+            <p class="project-desc">
+              <!-- 🔧 PERSONNALISER : description -->
+              Conception d'un fréquencemètre analogique avec montages à AOP :
+              multivibrateur astable, sommateur, trigger de Schmitt et
+              conversion du signal pour interfaçage Arduino.
+            </p>
+            <div class="project-tech">
+              <span class="tag">AOP</span>
+              <span class="tag">Arduino</span>
+              <span class="tag">Analogique</span>
+            </div>
+            <div class="project-features">
+              <div class="feature">
+                <span class="feature-dot"></span>Trigger de Schmitt
+              </div>
+              <div class="feature">
+                <span class="feature-dot"></span>Multivibrateur astable
+              </div>
+              <div class="feature">
+                <span class="feature-dot"></span>Interfaçage Arduino
+              </div>
+            </div>
+            <a href="#" class="project-link">En savoir plus →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION FORMATION & EXPÉRIENCE
+  ============================================================ -->
+    <section id="formation" class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">04</span>
+          <h2 class="section-title">Parcours</h2>
+        </div>
+
+        <div class="timeline-grid">
+          <!-- Colonne Formation -->
+          <div class="timeline-col">
+            <h3 class="timeline-col-title">Formation</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2025 – 2028</span>
+                  <!-- 🔧 PERSONNALISER -->
+                  <h4>Électronique et Systèmes Embarqués</h4>
+                  <p class="timeline-org">Polytech Nice Sophia</p>
+                  <p class="timeline-desc">
+                    Electronique Numérique &amp; Analogique, Langage C,
+                    Microprocesseurs, Traitement du signal, Machine Learning,
+                    ISO 9001, Management de projet.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2023 – 2025</span>
+                  <!-- 🔧 PERSONNALISER -->
+                  <h4>Cycle Préparatoire Intégré PeiP</h4>
+                  <p class="timeline-org">Polytech Nice Sophia</p>
+                  <p class="timeline-desc">
+                    Algèbre, Analyse numérique, Electronique Analogique &amp;
+                    Numérique, Arduino.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne Expérience -->
+          <div class="timeline-col">
+            <h3 class="timeline-col-title">Expérience</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot timeline-dot-accent"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">Juil – Août 2024</span>
+                  <!-- 🔧 PERSONNALISER -->
+                  <h4>Assistant Commercial &amp; Logistique</h4>
+                  <p class="timeline-org">BSB Artisans Services, Antibes</p>
+                  <p class="timeline-desc">
+                    Stage dans le secteur BTP. Développement du relationnel,
+                    rigueur et autonomie en environnement professionnel.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 🔧 AJOUTER d'autres expériences ici si nécessaire -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION CONTACT
+  ============================================================ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-index">05</span>
+          <h2 class="section-title">Contact</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="contact-intro">
+              Disponible pour une <strong>alternance de 24 mois</strong> à
+              partir de <strong>septembre 2026</strong>. N'hésitez pas à me
+              contacter.
+            </p>
+            <div class="contact-links">
+              <!-- 🔧 PERSONNALISER : tes liens -->
+              <a href="mailto:bilelbensaid06@gmail.com" class="contact-link">
+                <span class="contact-link-icon">✉</span>
+                bilelbensaid06@gmail.com
+              </a>
+              <a href="tel:+33613611100" class="contact-link">
+                <span class="contact-link-icon">☏</span>
+                +33 6 13 61 11 00
+              </a>
+              <a
+                href="https://www.linkedin.com/in/bilel-b-3b4a99352/"
+                class="contact-link"
+                target="_blank"
+              >
+                <!-- 🔧 PERSONNALISER : ton lien LinkedIn -->
+                <span class="contact-link-icon">in</span>
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/bilelbensaid"
+                class="contact-link"
+                target="_blank"
+              >
+                <!-- 🔧 PERSONNALISER : ton lien GitHub -->
+                <span class="contact-link-icon">{ }</span>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Formulaire de contact -->
+          <div class="contact-form-wrap">
+            <!-- 🔧 PERSONNALISER : remplace l'action par ton endpoint (ex: Formspree) -->
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name">Nom</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Votre nom"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="votre@email.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Votre message..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                Envoyer le message
+              </button>
+              <p class="form-note" id="formNote"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span class="footer-name">Bilel BEN SAID</span>
+        <!-- 🔧 PERSONNALISER : l'année si besoin -->
+        <span class="footer-copy">© 2026 · Fait avec ❤</span>
+        <a href="#hero" class="footer-back">↑ Haut</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
